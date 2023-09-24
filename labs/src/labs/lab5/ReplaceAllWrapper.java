@@ -307,7 +307,19 @@ public class ReplaceAllWrapper {
 			
 		@Override
 		public int replaceAll(E e, E f) {
-			/*ADD YOUR CODE HERE*/
+			int counter = 0;
+			
+			Node<E> movingNode = header.getNext();
+			
+			while(movingNode != trailer) {
+				if(movingNode.getElement().equals(e)){
+					movingNode.setElement(f);
+					counter++;
+				}
+				movingNode = movingNode.getNext();
+			}
+			
+			return counter;
 		}
 
 

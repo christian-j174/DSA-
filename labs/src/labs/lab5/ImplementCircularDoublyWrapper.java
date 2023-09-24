@@ -237,17 +237,33 @@ public class ImplementCircularDoublyWrapper {
             return oldValue;
         }
 
-		@Override
-		public int firstIndex(E obj) {
-			/*TODO ADD YOUR CODE HERE*/
-			return -1;
-		}
+        @Override
+        public int firstIndex(E obj) {
+            Node current = header.getNext();
+            int index = 0;
+            while (current != header) {
+                if (current.getValue().equals(obj)) {
+                    return index;
+                }
+                current = current.getNext();
+                index++;
+            }
+            return -1;
+        }
 
-		@Override
-		public int lastIndex(E obj) {
-			/*TODO ADD YOUR CODE HERE*/
-			return -1;
-		}
+        @Override
+        public int lastIndex(E obj) {
+            Node current = header.getPrev();
+            int index = currentSize - 1;
+            while (current != header) {
+                if (current.getValue().equals(obj)) {
+                    return index;
+                }
+                current = current.getPrev();
+                index--;
+            }
+            return -1;
+        }
 
 	      @Override
 	        public int size() {

@@ -1,4 +1,4 @@
-package labs.lab5;
+package lab5;
 
 public class HasCycleWrapper {
 	/**

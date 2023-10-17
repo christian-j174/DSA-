@@ -1,4 +1,4 @@
-package labs.lab5;
+package lab5;
 
 import java.util.Comparator;
 import java.util.Iterator;
